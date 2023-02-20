@@ -1,0 +1,33 @@
+<body>
+
+    <head>
+        <title id="title"></title>
+        <style>
+            body {
+                background-color: rgb(52, 70, 85);
+                color: aqua;
+                border: 1px solid;
+            }
+        </style>
+    </head>
+
+
+
+    <div style="text-align: center;">
+        <div style="margin: 60px auto;">
+            <h3>SAVED DATA ADV</h3>
+        </div>
+    </div>
+
+<script>
+    const { ipcRenderer } = require("electron")
+    const values = require('./global_values.js')
+    const func = require('./functions')
+
+    func.set_program_id_music(localStorage.getItem('id_station'), values.global_data_base())
+    func.set_adv_program_id(localStorage.getItem('id_station'), values.adv_data_base())
+    localStorage.setItem('initialization', 3)
+
+    setTimeout(() => { ipcRenderer.send("close_id_music", { massage: 'close_id_music' }) }, 3000)
+</script>
+</body>

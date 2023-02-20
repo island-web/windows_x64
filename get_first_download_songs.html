@@ -1,0 +1,46 @@
+<body>
+
+    <head>
+        <title id="title"></title>
+        <style>
+            ::-webkit-scrollbar-thumb {
+                border-radius: 15px;
+                background: aliceblue;
+                background: radial-gradient(circle, aliceblue 58%, rgba(2, 0, 36, 0) 71%);
+                padding-right: 10px;
+            }
+
+            ::-webkit-scrollbar {
+                width: 2px;
+            }
+
+            body {
+                background-color: rgb(52, 70, 85);
+                color: aqua;
+                border: 1px solid;
+            }
+
+            .add-songs-now {
+                height: 500px;
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+
+
+
+    <div style="text-align: center;">
+        <div style="margin: 60px auto;">
+            <h3>DOWNLOAD SONGS. ALL COUNT SONGS <span class="songs-elem"></span>. WAIT...</h3>
+            <p>DOWNLOADED SONGS: [<span class="songs-finish"></span>]</p>
+        </div>
+        <div class="add-songs-now"></div>
+    </div>
+    <script>
+        const { ipcRenderer } = require("electron")
+        const values = require('./global_values.js')
+        const func = require('./functions')
+
+        func.download_songs(values.get_all_songs())
+    </script>
+</body>

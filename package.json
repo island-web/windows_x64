@@ -1,0 +1,29 @@
+{
+  "name": "tmm-ukraine-win-x64",
+  "productName": "tmm-ukraine-win-x64",
+  "description": "Music from TMM-UKRAINE",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "5.3.5",
+  "author": "denlupandin",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^21.3.5"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "date-and-time": "^2.4.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "jquery": "^3.6.3",
+    "kill-process-by-name": "^1.0.5",
+    "mysql2": "^3.1.0",
+    "nodejs-file-downloader": "^4.10.6",
+    "nodemailer": "^6.9.0",
+    "pm2": "^5.2.2",
+    "ps-list": "^8.1.1",
+    "shelljs": "^0.8.5"
+  }
+}

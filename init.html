@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="title"></title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: rgb(52, 70, 85);
+            color: aqua;
+            border: 1px solid;
+        }
+
+        #id_station {
+            margin-left: 2%;
+            border-radius: 10px;
+            padding: 5px;
+            width: 100px;
+            outline: none;
+            background: none;
+            color: aqua;
+        }
+
+        #start_init:hover {
+            color: rgb(195 210 221);
+            box-shadow: 0 0 2px 2px teal;
+            border: 1px solid teal;
+            background: none;
+            transition: all .5s;
+        }
+
+        #start_init {
+            margin-left: 2%;
+            border-radius: 3px;
+            background-color: rgba(115, 146, 171, 0.421);
+            color: aqua;
+            border: 1px solid;
+            padding: 10px;
+            cursor: pointer;
+            transition: all .5s;
+            display: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+        <div style="margin: 60px auto;">
+            
+            <label>ENTER ID STATION</label>
+            <input type="number" id="id_station">
+            <button id="start_init">CONFIRM</button>
+        </div>
+    </div>
+
+
+    <script src="./functions.js"></script>
+    <script src="./init.js"></script>
+    <script>
+        // const $ = require('jquery')
+        $(document).ready(function () {
+            $('#id_station').focus();
+
+            $('#id_station').on('input', function () {
+                if ($('#id_station').val() == '') {
+                    $('#start_init').fadeOut()
+                } else {
+                    $('#start_init').fadeIn()
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

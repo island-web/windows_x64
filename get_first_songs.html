@@ -1,0 +1,33 @@
+<body>
+
+    <head>
+        <title id="title"></title>
+        <style>
+            body {
+                background-color: rgb(52, 70, 85);
+                color: aqua;
+                border: 1px solid;
+            }
+        </style>
+    </head>
+
+
+
+    <div style="text-align: center;">
+        <div style="margin: 60px auto;">
+            <h3>SAVED ALL DATA STATION. START DOWNLOAD CONTENT</h3>
+        </div>
+    </div>
+
+<script>
+    const { ipcRenderer } = require("electron");
+    const values = require('./global_values.js')
+    const func = require('./functions')
+
+    func.set_all_songs(values.get_all_playlist(), values.global_data_base())
+    func.get_all_adv(values.get_programs_adv(), values.adv_data_base())
+    localStorage.setItem('initialization', 5)
+
+    setTimeout(() => { ipcRenderer.send("close_get_first_songs", { massage: 'close_get_first_songs' }) }, 3000)
+</script>
+</body>

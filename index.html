@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title id="title"></title>
+</head>
+
+<body style="background-color: black;">
+  <video playsinline autoplay muted loop id="bgvid">
+    <!-- <source src="bg_video.mp4" type="video/mp4"> -->
+  </video>
+
+
+
+  <header class="viewport-header">
+    <!-- <input type="hidden" id="name_station_input" value=""> -->
+    <div>
+      NAME_STATION: [ <span id="name_station"></span> ] [ v.5.3.5 ]
+    </div>
+    <div>
+      TIME_WORK: [ <span id="time_work">...</span> ]
+    </div>
+    <div>
+      TIME: [ <span id="time_station">...</span> ]
+    </div>
+    <div class="station-info"></div>
+  </header>
+  <main>
+    <div class="wraper">
+      <div class="central-block">
+        <div class="block-btn-1">
+          <p class="check-play-list">List songs</p>
+          <p class="check-adv-list">List ADV</p>
+          <p class="check-log-list">List LOG</p>
+        </div>
+        <div class="block-btn-2">
+          <button class="reload-btn">Reload</button>
+          <button class="initialization-btn">New initialization</button>
+          <button class="support-btn-main">Support</button>
+        </div>
+      </div>
+
+      <div class="add-block-info-songs add-block-info">
+        <div class="check-list-input-div check-list-input-song">
+          <input type="text" id="check-play-list-input" placeholder="search songs"><i
+            class="fa-solid fa-xmark closed-block-info"></i>
+        </div>
+        <p class='add-song-head'><span>id_song</span> <span>artist name_song</span> <span>id_playlist</span>
+          <span>name_playlist</span> <span>size</span>
+        </p>
+        <div class="add-block-info-text add-block-info-songs add-song"></div>
+      </div>
+
+
+      <div class="add-block-info-adv add-block-info">
+
+        <div class="check-list-input-div check-list-input-adv"><input type="text" id="check-adv-list-input"
+            placeholder="search adv"><i class="fa-solid fa-xmark closed-block-info"></i>
+        </div>
+        <p class='add-adv-head'><span>id_adv</span> <span>name_adv</span> <span>type</span> <span>id_program</span>
+          <span>date_start - date_stop</span> <span>time_start time_stop</span> <span>duration</span> <span>size</span>
+        </p>
+        <div class="add-block-info-text add-block-info-adv add-adv"></div>
+      </div>
+
+
+      <div class="add-block-info-log add-block-info">
+
+        <div class="check-list-input-div check-list-input-log"><i class="fa-solid fa-xmark closed-block-info"></i></div>
+
+        <div class="add-block-info-log add-log"></div>
+      </div>
+      <div class="block-info-main">
+        <div class="block-info-1"></div>
+        <div class="block-info-2" >
+          PLAY NOW:
+          <p class="play-now"></p>
+          <p class="time-length">
+            <span class="current"></span>
+            <span class="duration"></span>
+          </p>
+          <p class="progress-song"></p>
+        </div>
+      </div>
+      <div class="support-main">
+        <div class="support-contact">
+          <i class="fa-solid fa-xmark closed-block-support"></i>
+          <p>Technical support: [<a href="tel:+380671001228">(067)100-12-28</a>]</p>
+          <p>Sales department: [<a href="tel:+380671001228">(067)100-12-28</a>]</p>
+        </div>
+        <div class="support-body">
+          <textarea class="support-textarea" placeholder="Write your message"></textarea>
+          <button class="support-btn">Send massage</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <audio type="hidden" id="song" src=""></audio>
+  <audio type="hidden" id="interval" src=""></audio>
+  <audio type="hidden" id="fixed" src=""></audio>
+  <!-- You can also require other files to run in this process -->
+  <script src='./renderer.js'></script>
+
+
+  <script>
+
+
+  </script>
+</body>
+
+</html>
